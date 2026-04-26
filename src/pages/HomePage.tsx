@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Users, Tv, MapPin, BarChart3, Zap } from "lucide-react";
+import { RandomPortal } from "@/components/RandomPortal";
 
 const features = [
   {
@@ -66,6 +67,9 @@ export function HomePage() {
             >
               View Stats
             </Link>
+          </div>
+          <div className="mt-8 flex justify-center">
+            <RandomPortal />
           </div>
         </div>
       </section>
