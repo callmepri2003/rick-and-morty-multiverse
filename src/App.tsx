@@ -7,6 +7,7 @@ import { CharacterDetailPage } from "@/pages/CharacterDetailPage";
 import { EpisodesPage } from "@/pages/EpisodesPage";
 import { LocationsPage } from "@/pages/LocationsPage";
 import { StatsPage } from "@/pages/StatsPage";
+import { NotFoundPage } from "@/pages/NotFoundPage";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/episodes" element={<EpisodesPage />} />
           <Route path="/locations" element={<LocationsPage />} />
           <Route path="/stats" element={<StatsPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
       <Footer />
