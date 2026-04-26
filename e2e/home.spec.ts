@@ -3,8 +3,8 @@ import { test, expect } from "@playwright/test";
 test.describe("Home page", () => {
   test("shows hero section with portal", async ({ page }) => {
     await page.goto("/");
-    await expect(page.getByText("MultiverseDB")).toBeVisible();
-    await expect(page.getByText("interdimensional database")).toBeVisible();
+    await expect(page.getByRole("heading", { name: /MultiverseDB/i }).first()).toBeVisible();
+    await expect(page.getByText("interdimensional database").first()).toBeVisible();
   });
 
   test("has navigation links", async ({ page }) => {
