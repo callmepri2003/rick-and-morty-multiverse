@@ -48,6 +48,7 @@ export interface Episode {
 }
 
 export interface CharacterFilters {
+  [key: string]: string | number | undefined;
   page?: number;
   name?: string;
   status?: string;
@@ -56,6 +57,7 @@ export interface CharacterFilters {
 }
 
 export interface LocationFilters {
+  [key: string]: string | number | undefined;
   page?: number;
   name?: string;
   type?: string;
@@ -63,6 +65,7 @@ export interface LocationFilters {
 }
 
 export interface EpisodeFilters {
+  [key: string]: string | number | undefined;
   page?: number;
   name?: string;
   episode?: string;
