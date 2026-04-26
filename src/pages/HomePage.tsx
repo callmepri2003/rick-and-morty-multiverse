@@ -33,7 +33,7 @@ export function HomePage() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="relative overflow-hidden py-24 text-center">
+      <section className="relative overflow-hidden py-14 text-center md:py-24">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_#00b5cc22_0%,_transparent_70%)]" />
         <div className="relative mx-auto max-w-4xl px-4">
           <div className="mb-6 flex justify-center">
@@ -44,10 +44,10 @@ export function HomePage() {
               <div className="absolute inset-6 rounded-full bg-portal-dark" />
             </div>
           </div>
-          <h1 className="text-5xl font-bold tracking-tight text-white md:text-6xl">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
             Multiverse<span className="text-portal-teal">DB</span>
           </h1>
-          <p className="mt-4 text-xl text-gray-400">
+          <p className="mt-4 text-lg text-gray-400 sm:text-xl">
             The interdimensional database for Rick &amp; Morty enthusiasts
           </p>
           <p className="mx-auto mt-2 max-w-2xl text-sm text-gray-600">

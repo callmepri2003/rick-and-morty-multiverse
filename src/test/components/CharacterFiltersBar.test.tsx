@@ -8,9 +8,9 @@ describe("CharacterFiltersBar", () => {
   it("renders all filter controls", () => {
     render(<CharacterFiltersBar filters={DEFAULT_FILTERS} onChange={vi.fn()} />);
     expect(screen.getByPlaceholderText("Search characters...")).toBeInTheDocument();
-    expect(screen.getByText("All statuses")).toBeInTheDocument();
-    expect(screen.getByText("All species")).toBeInTheDocument();
-    expect(screen.getByText("All genders")).toBeInTheDocument();
+    expect(screen.getByText("Status")).toBeInTheDocument();
+    expect(screen.getByText("Species")).toBeInTheDocument();
+    expect(screen.getByText("Gender")).toBeInTheDocument();
   });
 
   it("calls onChange with updated name", () => {

@@ -111,7 +111,7 @@ export function CharacterDetailPage() {
         <div className="space-y-6">
           <div>
             <div className="flex flex-wrap items-center gap-3">
-              <h1 className="text-3xl font-bold text-white">{character.name}</h1>
+              <h1 className="break-words text-2xl font-bold text-white sm:text-3xl">{character.name}</h1>
               <Badge variant={statusVariant}>
                 <span
                   className={`mr-1.5 inline-block h-1.5 w-1.5 rounded-full ${statusDot(character.status)}`}

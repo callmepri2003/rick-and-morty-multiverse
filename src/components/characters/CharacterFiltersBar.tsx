@@ -1,5 +1,3 @@
-"use client";
-
 import { SearchInput } from "@/components/ui/SearchInput";
 import { Select } from "@/components/ui/Select";
 
@@ -45,34 +43,36 @@ export function CharacterFiltersBar({ filters, onChange }: CharacterFiltersBarPr
     onChange({ ...filters, [key]: value });
 
   return (
-    <div className="flex flex-wrap gap-3" data-testid="character-filters">
+    <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap" data-testid="character-filters">
       <SearchInput
         value={filters.name}
         onChange={set("name")}
         placeholder="Search characters..."
-        className="min-w-[200px] flex-1"
+        className="w-full sm:min-w-[200px] sm:flex-1"
       />
-      <Select
-        value={filters.status}
-        onChange={set("status")}
-        options={STATUS_OPTIONS}
-        placeholder="All statuses"
-        className="min-w-[140px]"
-      />
-      <Select
-        value={filters.species}
-        onChange={set("species")}
-        options={SPECIES_OPTIONS}
-        placeholder="All species"
-        className="min-w-[140px]"
-      />
-      <Select
-        value={filters.gender}
-        onChange={set("gender")}
-        options={GENDER_OPTIONS}
-        placeholder="All genders"
-        className="min-w-[130px]"
-      />
+      <div className="grid grid-cols-3 gap-3 sm:contents">
+        <Select
+          value={filters.status}
+          onChange={set("status")}
+          options={STATUS_OPTIONS}
+          placeholder="Status"
+          className="sm:min-w-[140px]"
+        />
+        <Select
+          value={filters.species}
+          onChange={set("species")}
+          options={SPECIES_OPTIONS}
+          placeholder="Species"
+          className="sm:min-w-[140px]"
+        />
+        <Select
+          value={filters.gender}
+          onChange={set("gender")}
+          options={GENDER_OPTIONS}
+          placeholder="Gender"
+          className="sm:min-w-[130px]"
+        />
+      </div>
     </div>
   );
 }
