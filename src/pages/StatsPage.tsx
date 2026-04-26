@@ -61,14 +61,14 @@ function StatCard({
   color?: string;
 }) {
   return (
-    <Card className="flex items-center gap-4">
-      <div className="rounded-lg bg-gray-800 p-3">
-        <Icon className={`h-6 w-6 ${color}`} />
+    <Card className="flex items-center gap-3">
+      <div className="shrink-0 rounded-lg bg-gray-800 p-2.5">
+        <Icon className={`h-5 w-5 ${color}`} />
       </div>
-      <div>
-        <p className="text-2xl font-bold text-white">{value}</p>
-        <p className="text-sm text-gray-400">{label}</p>
-        {sub && <p className="text-xs text-gray-600">{sub}</p>}
+      <div className="min-w-0">
+        <p className="text-xl font-bold text-white sm:text-2xl">{value}</p>
+        <p className="truncate text-xs text-gray-400 sm:text-sm">{label}</p>
+        {sub && <p className="hidden text-xs text-gray-600 sm:block">{sub}</p>}
       </div>
     </Card>
   );
@@ -147,7 +147,7 @@ export function StatsPage() {
       </div>
 
       {/* Survival breakdown */}
-      <div className="mb-8 grid grid-cols-3 gap-4">
+      <div className="mb-8 grid grid-cols-3 gap-2 sm:gap-4">
         <Card className="text-center">
           <Heart className="mx-auto mb-2 h-6 w-6 text-portal-green" />
           <p className="text-2xl font-bold text-portal-green">{aliveCount}</p>
